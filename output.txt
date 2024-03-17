@@ -1,0 +1,65 @@
+CREATE TABLE books (
+id serial,
+isbn varchar(16),
+title varchar(256),
+author varchar(128),
+publication_date date,
+shelf_id integer
+);
+
+CREATE TABLE journals (
+id serial,
+issn varchar(16),
+title varchar(256),
+author varchar(128),
+publication_date date,
+shelf_id integer
+);
+
+CREATE TABLE users (
+id serial,
+username varchar(32),
+email varchar(128),
+password varchar(128)
+);
+
+CREATE TABLE bookshelves (
+id serial,
+owner_id integer,
+location varchar(256)
+);
+
+CREATE TABLE book_borrowing_records (
+id serial,
+user_id integer,
+book_id integer,
+borrowed timestamp,
+returned timestamp,
+expected_return timestamp
+);
+
+CREATE TABLE book_reservation_records (
+id serial,
+user_id integer,
+book_id integer,
+reservation_start timestamp,
+reservation_end timestamp
+);
+
+CREATE TABLE journal_borrowing_records (
+id serial,
+user_id integer,
+journal_id integer,
+borrowed timestamp,
+returned timestamp,
+expected_return timestamp
+);
+
+CREATE TABLE journal_reservation_records (
+id serial,
+user_id integer,
+journal_id integer,
+reservation_start timestamp,
+reservation_end timestamp
+);
+
