@@ -17,8 +17,6 @@ mermaid2queries is ~~currently~~ a console application written in Java that foll
 - Navigate to the directory where you cloned the repository.
 - Run the application from the command line with the following command:
 
-css
-
 `java Main [options]`
 
 Replace `[options]` with any of the following:
@@ -29,8 +27,6 @@ Replace `[options]` with any of the following:
 - `-i inputFilePath -o outputFilePath`: Specifies both custom input and output file paths.
 
 Example usage:
-
-css
 
 `java Main -i current/path/input.txt -o current/path/output.txt`
 
