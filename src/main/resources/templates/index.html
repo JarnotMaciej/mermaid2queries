@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mermaid2Query</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center my-4">Paste Your Mermaid JS database diagram here:</h1>
+    <form action="/convert" method="post">
+        <div class="form-group my-4">
+            <textarea name="input" class="form-control" placeholder="Paste your text here..." rows="8"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block my-4 mx-auto">Submit</button>
+    </form>
+</div>
+
+
+    <script th:src="@{/bootstrap.min.js}"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package mj.m2q.model;
+package m2q.app.model;
 
 /**
  * Fields class - represents fields in a table.
