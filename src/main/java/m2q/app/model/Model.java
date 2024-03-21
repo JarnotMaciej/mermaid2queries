@@ -88,7 +88,7 @@ public class Model {
             StringBuilder sb = new StringBuilder();
             sb.append("CREATE TABLE ").append(table.name).append(" (\n");
             for (Field column : table.columns) {
-                sb.append(column.name).append(" ").append(column.type).append(",\n");
+                sb.append(column.getName()).append(" ").append(column.getType()).append(",\n");
             }
             sb.deleteCharAt(sb.length() - 2);
             sb.append(");\n");

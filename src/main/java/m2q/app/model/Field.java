@@ -1,28 +1,31 @@
 package m2q.app.model;
 
+import lombok.Data;
+
 /**
  * Fields class - represents fields in a table.
  *
  * @author JarnotMaciej
  * @version 1.0
  */
+@Data
 public class Field {
     /**
      * Field name.
      */
-    String name;
+    private String name;
     /**
      * Field type.
      */
-    String type;
+    private String type;
     /**
      * Field is primary key.
      */
-    Boolean isPrimaryKey;
+    private Boolean isPrimaryKey;
     /**
      * Field is not null.
      */
-    Boolean notNull;
+    private Boolean notNull;
 
     /**
      * Constructor.
@@ -35,17 +38,5 @@ public class Field {
         this.type = type;
         this.isPrimaryKey = type.toLowerCase().contains("serial");
         this.notNull = true;
-    }
-
-    /**
-     * Method allows to print field to the console.
-     */
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(type).append(": ").append(name);
-        if (isPrimaryKey) {
-            sb.append(" (PK)");
-        }
-        return sb.toString();
     }
 }
